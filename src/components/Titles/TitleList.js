@@ -3,9 +3,13 @@ import TitleListItem from "./TitleListItem";
 
 const TitleList = ({ data }) => {
   const renderedList = data.map(title => {
-    return <TitleListItem key={title.id} data={title} />;
+    return <TitleListItem className="col-sm" key={title.id} data={title} />;
   });
-  return <div>{renderedList}</div>;
+  return (
+    <div className="container">
+      <div className="row">{renderedList}</div>
+    </div>
+  );
 };
 
 export default TitleList;
