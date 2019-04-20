@@ -21,13 +21,13 @@ class Nav extends Component {
   render() {
     return (
       <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item active" aria-current="page">
+        <ol className="breadcrumb">
+          <li className="breadcrumb-item active" aria-current="page">
             <button className={this.state.btn1} onClick={this.handleClickShows}>
               Tv Shows
             </button>
           </li>
-          <li class="breadcrumb-item">
+          <li className="breadcrumb-item">
             <button
               className={this.state.btn2}
               onClick={this.handleClickMovies}
