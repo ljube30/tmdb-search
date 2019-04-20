@@ -1,16 +1,21 @@
 import React from "react";
 
 const TitleListItem = ({ data }) => {
-  const listItemStyles = {
-    height: "40rem",
+  const listItemImageStyle = {
+    height: "35rem",
     width: "auto"
   };
+  const listItemsStyle = {
+    margin: "1rem",
+    padding: "0.5rem",
+    textAlign: "center"
+  };
   return (
-    <div>
+    <div className="border" style={listItemsStyle}>
       <img
         alt={data.original_title}
-        className="img-fluid img-thumbnail"
-        style={listItemStyles}
+        className="img-fluid"
+        style={listItemImageStyle}
         src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`}
       />
       <h2>{data.name}</h2>
