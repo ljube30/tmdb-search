@@ -7,12 +7,15 @@ class Nav extends Component {
   };
 
   handleClickShows = () => {
+    this.props.onNavChange("/tv/popular");
     this.setState({
       btn1: "btn btn-primary",
       btn2: "btn btn-light"
     });
   };
   handleClickMovies = () => {
+    //Make sure we call callback from parent component
+    this.props.onNavChange("/movie/popular");
     this.setState({
       btn1: "btn btn-light",
       btn2: "btn btn-primary"
