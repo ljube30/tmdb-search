@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Nav from "./Nav";
 import tmdb from "../apis/tmdb";
+import TitleList from "./Titles/TitleList";
 
 class Home extends Component {
   state = {
@@ -26,7 +27,7 @@ class Home extends Component {
     return (
       <React.Fragment>
         <Nav onNavChange={this.onNavChange} />
-        <button onClick={this.onbuttonClick}>Execute</button>
+        <TitleList data={this.state.data} />
       </React.Fragment>
     );
   }
