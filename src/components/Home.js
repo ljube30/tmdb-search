@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Nav from "./Nav";
 import tmdb from "../apis/tmdb";
 import TitleList from "./Titles/TitleList";
+import SearchBar from "./SearchBar";
 
 class Home extends Component {
   state = {
@@ -11,24 +12,22 @@ class Home extends Component {
 
   componentDidMount = async () => {
     const response = await tmdb.get(this.state.searchTerm);
-    console.log(response);
     //GET TOP 10 TV SHOWS BASED ON POPULARITY
     this.setState({ data: response.data.results.splice(0, 10) });
   };
   onNavChange = async callbackTerm => {
     const response = await tmdb.get(callbackTerm);
-    console.log(response);
     //GET TOP 10 TVSHOWS or MOVIES(Depends on navbar click) BASED ON POPULARITY
     this.setState({ data: response.data.results.splice(0, 10) });
   };
 
   render() {
-    console.log(this.state.data);
     return (
-      <React.Fragment>
+      <div className="container">
         <Nav onNavChange={this.onNavChange} />
+        <SearchBar />
         <TitleList data={this.state.data} />
-      </React.Fragment>
+      </div>
     );
   }
 }

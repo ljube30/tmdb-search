@@ -4,8 +4,8 @@ import TitleListItem from "./TitleListItem";
 const TitleList = ({ data }) => {
   const renderedList = data.map(title => {
     return (
-      <div className="mx-auto">
-        <TitleListItem className="col-sm" key={title.id} data={title} />
+      <div className="mx-auto" key={title.id}>
+        <TitleListItem className="col-sm" data={title} />
       </div>
     );
   });
