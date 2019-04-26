@@ -13,16 +13,20 @@ class SearchBar extends Component {
     this.setState({
       searchTerm: event.target.value
     });
+
+    if (this.state.searchTerm.length >= 2) {
+      console.log("Triggered");
+    }
   };
 
   render() {
     return (
-      <div class="col-md-12">
-        <form class="navbar-form" onSubmit={this.handleFormSubmit}>
-          <div class="input-group add-on">
+      <div className="col-md-12">
+        <form className="navbar-form" onSubmit={this.handleFormSubmit}>
+          <div className="input-group add-on">
             <input
-              class="form-control"
-              placeholder="Search"
+              className="form-control"
+              placeholder="&#x1F50D; Search"
               type="text"
               value={this.state.searchTerm}
               onChange={this.handleInputChange}
