@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import tmdb from "../../apis/tmdb";
 
 class TitleDetails extends Component {
-  state = { data: [] };
+  state = { data: [], videos: "" };
   titleId = localStorage.getItem("titleId");
 
   componentDidMount = async () => {
@@ -13,21 +13,32 @@ class TitleDetails extends Component {
     } catch {
       response = await tmdb.get(`/tv/${this.titleId}`);
     }
-    this.setState({ data: response.data });
+    let videos = {};
+    try {
+      videos = await tmdb.get(`/movie/${this.titleId}/videos`);
+    } catch {
+      videos = await tmdb.get(`/tv/${this.titleId}/videos`);
+    }
+    if (typeof videos.data.results[0] != "undefined") {
+      this.setState({
+        data: response.data,
+        videos: videos.data.results[0].key
+      });
+    } else {
+      this.setState({
+        data: response.data
+      });
+    }
   };
 
   render() {
-    console.log(this.state.data);
+    const videoSrc = `https://www.youtube.com/embed/${this.state.videos}`;
     return (
       <div className="container">
         <Link to="/">{"<"} Back</Link>
-        <div />
-        <img
-          alt={this.state.data.original_title}
-          className="img-fluid"
-          style={this.listItemImageStyle}
-          src={`https://image.tmdb.org/t/p/w400/${this.state.data.poster_path}`}
-        />
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe title="Video Player" src={videoSrc} allowfullscreen />
+        </div>
         <h2>{this.state.data.name}</h2>
         <h2>{this.state.data.original_title}</h2>
         <p>
