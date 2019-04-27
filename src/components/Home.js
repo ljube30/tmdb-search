@@ -11,6 +11,7 @@ class Home extends Component {
   };
 
   componentDidMount = async () => {
+    localStorage.setItem("navActive", "tv");
     const response = await tmdb.get(this.state.searchTerm);
     //GET TOP 10 TV SHOWS BASED ON POPULARITY
     this.setState({ data: response.data.results.splice(0, 10) });

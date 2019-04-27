@@ -8,6 +8,7 @@ class Nav extends Component {
 
   handleClickShows = () => {
     this.props.onNavChange("/tv/popular");
+    localStorage.setItem("navActive", "tv");
     this.setState({
       btn1: "btn btn-primary",
       btn2: "btn btn-light"
@@ -16,6 +17,7 @@ class Nav extends Component {
   handleClickMovies = () => {
     //Make sure we call callback from parent component
     this.props.onNavChange("/movie/popular");
+    localStorage.setItem("navActive", "movies");
     this.setState({
       btn1: "btn btn-light",
       btn2: "btn btn-primary"
