@@ -35,12 +35,22 @@ class TitleDetails extends Component {
     const videoSrc = `https://www.youtube.com/embed/${this.state.videos}`;
     return (
       <div className="container">
-        <Link to="/">{"<"} Back</Link>
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe title="Video Player" src={videoSrc} allowfullscreen />
+        <Link to="/" style={{ fontSize: "1.3rem" }}>
+          <div style={{ margin: "1rem 0" }}>{"<"} Back</div>
+        </Link>
+        <div
+          className="embed-responsive embed-responsive-16by9"
+          style={{ margin: "2rem 0rem" }}
+        >
+          <iframe
+            className="embed-responsive-item"
+            title="Video Player"
+            src={videoSrc}
+            allowfullscreen
+          />
         </div>
-        <h2>{this.state.data.name}</h2>
-        <h2>{this.state.data.original_title}</h2>
+        <h1>{this.state.data.name}</h1>
+        <h1>{this.state.data.original_title}</h1>
         <p>
           Overview:
           <br />
