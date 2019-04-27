@@ -46,7 +46,7 @@ class TitleDetails extends Component {
             className="embed-responsive-item"
             title="Video Player"
             src={videoSrc}
-            allowfullscreen
+            allowFullScreen
           />
         </div>
         <h1>{this.state.data.name}</h1>
