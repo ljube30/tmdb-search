@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-#RUN
+# RUN
 
 To run this project first use:
 
@@ -14,7 +14,7 @@ Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
-#App details
+# App details
 
 | Completed    | Not Completed |
 | ----------- | ----------- |
@@ -24,5 +24,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 | Bootstrap  |  
 | Router Usage  | 
 
-###notes
+### notes
 I started search functionality but I had problems with CORS policy so i scraped it.
