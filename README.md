@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # RUN
 
-To run this project first use:
+To run this project you need to have npm installed, when npm is installed open up cmd in project directory and first use:
 
 ### `npm install`
 
@@ -13,14 +13,12 @@ To run this project first use:
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-
 # App details
 
-| Completed    | Not Completed |
-| ----------- | ----------- |
-| Pulling data from API     | Search functionality     |
-| HomePage   |Store (Redux, Mobix or Kea)       |
-| VideoDetails   |  
-| Bootstrap  |  
-| Router Usage  | 
-
+| Completed             | Not Completed               |
+| --------------------- | --------------------------- |
+| Pulling data from API | Search functionality        |
+| HomePage              | Store (Redux, Mobix or Kea) |
+| VideoDetails          |
+| Bootstrap             |
+| Router Usage          |
