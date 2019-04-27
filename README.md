@@ -24,5 +24,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 | Bootstrap  |  
 | Router Usage  | 
 
-### notes
-I started search functionality but I had problems with CORS policy so i scraped it.
