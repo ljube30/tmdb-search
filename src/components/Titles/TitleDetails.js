@@ -21,9 +21,20 @@ class TitleDetails extends Component {
     return (
       <div className="container">
         <Link to="/">{"<"} Back</Link>
-        <div>Trailer Here</div>
-        <div>Title Here</div>
-        <div>Overview Here</div>
+        <div />
+        <img
+          alt={this.state.data.original_title}
+          className="img-fluid"
+          style={this.listItemImageStyle}
+          src={`https://image.tmdb.org/t/p/w400/${this.state.data.poster_path}`}
+        />
+        <h2>{this.state.data.name}</h2>
+        <h2>{this.state.data.original_title}</h2>
+        <p>
+          Overview:
+          <br />
+          {this.state.data.overview}
+        </p>
       </div>
     );
   }
