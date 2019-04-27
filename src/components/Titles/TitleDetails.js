@@ -10,7 +10,7 @@ class TitleDetails extends Component {
     let response = {};
     if (localStorage.getItem("navActive") === "movies") {
       response = await tmdb.get(`/movie/${this.titleId}`);
-    } else if (localStorage.getItem("navActive") == "tv") {
+    } else if (localStorage.getItem("navActive") === "tv") {
       response = await tmdb.get(`/tv/${this.titleId}`);
     }
     let videos = {};
