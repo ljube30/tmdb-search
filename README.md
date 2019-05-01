@@ -18,7 +18,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 | Completed             | Not Completed               |
 | --------------------- | --------------------------- |
 | Pulling data from API | Search functionality        |
-| HomePage              | Store (Redux, Mobix or Kea) |
+| HomePage              | 
 | VideoDetails          |
 | Bootstrap             |
 | Router Usage          |
+| Visuals               |
